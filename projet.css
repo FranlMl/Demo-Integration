@@ -1,0 +1,688 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+
+
+/* ------------- Général ----------- */
+
+
+* {  margin: 0 ;
+        padding: 0;
+            box-sizing: border-box;
+    }
+
+
+html{
+
+    font: normal 16px sans-serif;
+}
+
+body {
+    background-color: hsl(218, 28%, 13%);
+
+            color: #fff;
+                font-family:'Open Sans', sans-serif;}
+
+
+
+ul, nav {
+
+    list-style-type: none;
+        
+}
+
+a{text-decoration: none;
+        color: inherit;
+            cursor: pointer;
+                opacity: 0.9;
+    }
+
+a:hover {
+    opacity: 1;
+}
+
+a.btn {
+    color:#fff;
+        border-radius: 4px;
+            border: 1px solid grey;
+            text-transform: uppercase;
+                background-color: rgb(18, 18, 65);
+                    font-weight: 800;
+                        text-align: center;
+}
+
+section {
+    display: flex;
+        flex-direction: column;
+            align-items: center;
+                padding: 125px 100px;
+}
+
+
+@media(max-width:1000px) {
+
+    section {padding:125px 50px}
+}
+
+
+@media(max-width:600px) {
+
+    section {padding:80px 30px}
+
+
+}
+
+
+section h3.title {
+
+    color: rgb(160, 124, 71);
+        
+        text-transform: capitalize;
+        font-family: 'Poiret One', cursive;
+            font-size: 50px;
+                margin-bottom: 35px;
+                    text-align: center;
+}
+
+
+section p{
+
+    max-width: 800px;
+        text-align: center;
+            margin-bottom: 35px;
+                padding: 0 20px;
+                    line-height: 2;
+}
+
+ul.grid {
+    width: 100%;
+        display: flex;
+            flex-wrap: wrap;
+                justify-content: center;
+
+}
+
+hr {
+    width: 60%;
+        height: 2px;
+            background-color: grey;
+                border: 0;
+                    margin: 60px;
+
+}
+
+
+
+
+/* ----------- Header ------------ */
+
+
+
+header {display: flex;
+            justify-content: space-between;
+        
+            position: absolute;
+                background-color: hsl(217, 28%, 15%);
+                    align-items: center;
+                        position: fixed;
+                            color: white;
+                                top: 0;
+                                    left: 0;
+                                     padding: 35px;
+                                        z-index: 10;
+                                            width: 100%;}
+
+
+
+
+header h2 {
+
+    font-family: 'Poiret One', cursive;
+        font-size: 25px;
+
+}
+
+header nav {
+
+display: flex;
+    
+}
+
+header nav li {
+    font-family: 'Poiret One', cursive;
+        font-size: 20px;
+    margin: 0 15px;
+
+}
+
+header nav li a:hover  {
+
+color: rgb(160, 124, 71);
+
+}
+
+
+@media (max-width: 1000px) {
+
+    header { padding: 20px 50px;}
+
+}
+
+@media (max-width: 500px) {
+
+    header{flex-direction: column;}
+    
+    header h2 {margin-bottom: 20px;}            
+
+}
+
+
+/*Page d'accueil */
+
+
+
+.hero {
+    position: relative;
+        justify-content: center;
+            min-height: 100vh;
+                color: black;
+                    text-align: center;
+}
+
+.hero .background-image {
+
+    position: absolute;
+        top: 50;
+            left: 0;
+                width: 100%;
+                    height: 90%;
+                        background-size: cover;
+                            background-color: #3a5266;
+                                z-index: -1;
+}
+
+.hero h1 {
+   
+    font-family: 'Monoton', cursive;
+            color: ivory;    
+                font-size: 50px;
+                    margin-bottom: 20px;
+
+}
+
+
+.bloc {
+
+    position: absolute;
+        top: 45%;
+            left: 50%;
+                transform: translate(-50%);
+                    background-color: black;
+                        width: 100vw;
+                            display: flex;
+                                justify-content: center;
+                                    align-items: center;
+}
+
+
+.bloc span {
+
+    font-size: 4vw;
+        position: relative;
+            letter-spacing: 25px;
+
+}
+
+
+
+
+.hero h3 {
+    font: normal 25px  'Monoton', cursive;
+       color:  ivory;
+        font-size: 30px;
+        margin-bottom: 60px;
+}
+
+.hero a.btn
+{  padding: 20px 46px;
+
+}
+
+@media (max-width: 800px) {
+
+    .hero {
+        min-height: 600px;}
+
+    .hero h1 {
+        min-height: 48px;}
+
+    .hero h3 {
+        min-height: 24px;}
+
+    .hero a.btn{
+        min-height: 15px 40px;}
+
+
+
+}
+
+
+/* Our work section */
+
+
+.our-work .grid li {
+
+padding: 20px;
+    height: 350px;
+        border-radius: 3px;
+
+background-clip: content-box;
+    background-size: cover;
+        background-position: center;
+
+    }
+
+    .our-work .grid li.small {
+
+    flex-basis: 40%;
+        
+    }
+
+    .our-work .grid li.large {
+
+    flex-basis: 60%;
+
+    }
+
+
+    @media (max-width: 1000px) {
+
+        
+    .our-work .grid li.small, 
+    .our-work .grid li.large {
+
+        flex-basis: 100%;
+
+         }
+
+    }
+
+    
+    /* Feature section */
+
+
+    .features {
+
+        background-color: rgb(255, 255, 255)
+
+    }
+
+
+    .features .grid li {
+
+    padding: 0 30px;
+        flex-basis: 33%;
+            text-align: center;
+    }
+
+
+    .features .grid li i  {
+
+        font-size: 50px;
+            color: #153e64;
+                margin-bottom: 25px;
+
+    }
+
+    .features title h4 {
+
+        color: black;
+    }
+ 
+
+
+    .features .grid li h4 {
+
+        color: #555;
+            font-size: 20px;
+                margin-bottom: 25px;
+    }
+
+    .features .grid li p {
+
+        margin: 0;
+            
+        color: #555;
+            
+    }
+
+    @media (max-width: 1000px) {
+
+        .features .grid li{
+            flex-basis: 70%;
+                margin-bottom: 65px;}
+
+        .features .grid li:last-child {
+
+            margin-bottom: 0;}
+
+    }
+
+    @media (max-width: 600px) {
+
+        .features .grid li {
+
+            flex-basis: 100%;
+
+        }
+}
+
+    
+/* Review section */
+
+
+.review .quote {
+
+    text-align: center;
+        width: 80%;
+            font-size: 22px;
+                font-weight: 300;
+                    line-height: 1.5;
+                        margin-bottom: 20px;
+                            padding: 0;
+}
+
+.review .author {
+
+    font-size: 18px;
+        margin-bottom: 50px;
+            
+
+}
+
+.review .author:last-child {
+
+    margin-bottom: 0;
+    color: grey;
+
+}
+
+
+@media (max-width: 1000px) {
+
+    .review .quote {
+
+        font-size: 20px;}
+    
+        .reviews .author {
+
+        font-size: 10px;
+
+        }
+
+}
+
+
+/* Section Contact */
+
+
+.contact {
+
+background-color:rgb(255, 255, 255)
+
+
+}
+
+.contact h4 {
+    font-size: 60px;
+    font-family: 'Poiret One', cursive;
+    color: rgb(160, 124, 71);;
+
+}
+
+.contact p {
+
+    color: black;
+}
+
+
+.contact form {
+
+display: flex;
+    align-items: center;
+        justify-content: center;
+            flex-wrap: wrap;
+                max-width: 800px;
+                    width: 80%;
+}
+
+
+.contact form input {
+
+    padding: 15px;
+        flex: 1;
+            margin-right: 30px;
+                font-size: 18px;
+                    color: #555;
+}
+
+.contact form .btn {
+
+    padding: 18px 42px;
+
+}
+
+@media (max-width:800px) {
+
+    .contact form input {
+        flex-basis: 100%;
+            margin: 0 0 20px 0;
+
+
+    }
+
+
+}
+
+
+
+/* FOOTER */
+
+
+footer {
+
+    display: flex;
+        justify-content: space-between;
+             position: relative;
+                flex-wrap: wrap;
+                    width: 100%;
+                        height: auto;
+                             padding: 50px 100px;}
+
+
+footer .container {
+
+display: flex;
+    flex-wrap: wrap;
+        justify-content: space-between;
+            flex-direction: row;
+            
+}
+
+footer .container .sec {
+
+    margin-right: 30px ;
+
+
+}
+
+footer .container .sec.aboutus {
+
+    width: 40%;
+
+}
+
+
+footer .container  h2 {
+
+
+position: relative;
+    color: #fff;
+    font-family: 'Poiret One', cursive;
+        font-size: 25px;
+        font-weight: 500;
+            margin-bottom: 15px;
+
+}
+
+
+footer .container  h2:before {
+
+    content: '';
+        position: absolute;
+            bottom: -5px;
+                left: 0;
+                    width: 50px;
+                        height: 2px;
+                            background: rgb(160, 124, 71);}
+
+
+footer p {
+    color: #999;
+    width: 80%;
+}
+
+.sci {
+
+    margin-top: 20px;
+        display: flex;
+}
+
+
+.sci li a {
+
+    display: flex;
+        background: #222;
+        justify-content: center;
+            align-items: center;
+                margin-right: 10px;
+    
+  
+        border-radius: 4px;
+
+        width: 40px;
+            height: 40px;
+}
+
+.sci li a:hover {
+
+    background: rgb(160, 124, 71);
+
+}
+
+.sci li a .fa {
+
+    color: #fff;
+        font-size: 20px;
+}
+
+.quicklinks {
+
+    position: relative;
+        width: 25%; 
+}
+
+.quicklinks ul li a {
+
+    color: #999;
+        margin-bottom: 10px;
+            display: inline-block;
+}
+
+
+
+
+.contacT {
+
+    width: calc(35% - 150px);
+        margin-right: 0 !important;
+
+} 
+
+.contacT .info li {
+
+
+display: flex;
+    margin-bottom: 16px;
+       
+
+}
+
+.contacT .info li span:nth-child(1) 
+
+{
+    color: #fff;
+        font-size: 20px;
+            margin-right: 10px;
+
+}
+
+.contacT .info li span {
+
+    color: #999;
+
+}
+
+.contacT .info li a {
+
+    color: #999;
+    
+}
+
+.contacT .info li a:hover {
+
+    color: #fff;
+    
+}
+
+
+.copyrightText {
+
+    width: 100%;
+        background: #181818;
+            padding: 8px 100px;
+                text-align: center;
+                    color: #999;
+
+
+}
+
+
+@media (max-width: 990px) {
+
+
+    footer {
+    padding: 40px;}
+
+    footer .container {
+    flex-direction: column;}
+
+    footer .container .sec {
+        margin-right: 0;
+            margin-bottom: 40px;
+    }
+
+    footer .container .sec .aboutus, .quicklinks, .contacT {
+
+        width: 100%;}
+
+
+    .copyrightText  {
+
+            padding : 8px 40px;
+        }
+
+}
